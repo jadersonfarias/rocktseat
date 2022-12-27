@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font01: 'Staatliches', sans-serif;
+    --font02: 'Palanquin', sans-serif;
+
+    --bg-header:hsla(218, 17%, 62%, 1);
+    --h1-header: hsla(275, 18%, 79%, 1);
+    --main-bg: hsla(233, 100%, 97%, 1);
+    --cor1:#4A4E69;
+    --cor2:hsla(274, 84%, 12%, 1);
+    --cor3:hsla(312, 91%, 96%, 1);
+
+    font-size: 62.5%;
+}
+
+.page {
+    width:38.4rem;
+    margin: 0 auto;
+    background-color:var(--main-bg);   
+}
+
+main {
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+
+header {
+  height: 28rem;
+  margin: 0 auto;
+  padding: 3.2rem 0 2.9rem;
+}
+
+.header-container{
+    background-color: var(--bg-header);
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+header h1 {
+    text-align: center;
+    font-family: var(--font01font-family);
+    text-shadow: 0px 2px 2px black;
+    font-size: 4rem;
+    line-height: 3.4rem;
+    color: #FFFFFF;
+
+    height: 5rem;
+    padding:8px 0px 8px;
+    background-color: var(--h1-header);  
+    margin-top: 1rem;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;     
+}
+
+header p { 
+    font-family: var(--font02);
+    font-size: 2.0rem;
+    line-height: 1.5rem;
+    color: var(--cor2);
+    text-align: center;
+}
+
+.p-container{
+    width: 90%;
+    height: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+
+
+
+  
+}
+
+.card {
+    font-family: var(--font01);
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 2rem;
+    margin: 0 auto;
+    animation: card 300ms 380ms backwards;
+}
+
+.card h2 span {
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+
+    color: var(--cor1);
+}
+
+.card h2 {
+    width: 11.2rem;
+    height: 3.5rem;
+
+    background-color: var(--cor3);
+    text-align: center;
+    border-radius: 2rem;
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+}
+
+h2 {
+    animation: h2down 700ms 360ms backwards;
+
+}
+
+@keyframes h2down {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0,
+        );
+    }
+}
+
+@keyframes card {
+    0% {
+        opacity: 1;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 930px) {
+
+    .page {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 20vh 70vh 10vh;
+        grid-template-areas: "h m"
+                             "h m"
+                             "h f"
+    }
+
+    .p-container{
+        width: 75%;
+        height: 300px;
+        margin: 0 auto;
+        overflow: clip;
+
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 20px;
+        color: #FFFFFF;
+    
+       margin: 3.2rem auto 12rem;
+    }
+
+    footer{
+        grid-area: f;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column-start: 2;
+
+        font-family: 'Open Sans';
+        font-size: 14px;
+        line-height: 28px;
+
+        margin-bottom: 4.3rem;
+    }
+    
+    footer strong{
+        font-weight: bold;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+         color: rgb(255, 0, 217);
+    }
+
+    .header-container{
+        grid-area: h;
+        padding: 0;
+        margin: 0;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: m;
+    }
+
+    .cards-container{
+        display: grid;
+        width: 90%;
+        height: 80%;
+        gap: 3.2rem;
+        grid-template-areas: "A B C"
+                             "D B E"
+                             "D F E";
+    }
+
+    .cards-container div:nth-child(1){
+        grid-area: A;
+    }
+
+    .cards-container div:nth-child(2){
+        grid-area: B;
+    }
+
+    .cards-container div:nth-child(3){
+        grid-area: C;
+    }
+
+    .cards-container div:nth-child(4){
+        grid-area: D;
+    }
+
+    .cards-container div:nth-child(5){
+        grid-area: F;
+    }
+
+    .cards-container div:nth-child(6){
+        grid-area: E;
+    }
+    
+}
