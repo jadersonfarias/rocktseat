@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+.hide {
+    display: none;
+}
+
+body{
+
+    font-family:'Montserrat', sans-serif;
+
+    
+
+    background: linear-gradient(45deg, #190361, #bb00ff);
+  
+    
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+}
+
+main{
+    background-color: white;
+    padding: 4.8rem 6.4rem 6.4rem;
+    
+    
+    text-align: center;
+    width: 40.0rem;
+    margin-top: -5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+main div p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.0rem;
+
+    margin-bottom: 2.0rem;
+    margin-top: 1.4rem;
+}
+
+h1{
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: #34355B;
+}
+
+div{
+    width: 26.2rem;
+}
+
+
+#msg {
+    background: #E4EDF1;
+    margin-bottom: 1.9rem;
+    animation: yourLucky 2s;
+}
+
+#msg p{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+    
+}
+
+button{
+    background: #FF9500;
+    padding: 1.6rem;
+    border: none;
+    border-radius: 0.4rem;
+    margin-top: 5.9rem;
+    margin-bottom: -1.8rem;
+
+    cursor: pointer;
+  
+}
+
+
+
+#btntry:hover{
+    
+    animation: tremer  .3s ease;
+    animation-iteration-count: 4;
+    animation-iteration-count: infinite;
+    
+    cursor: pointer;
+    
+}
+
+@keyframes yourLucky {
+    0% {
+        transform:
+        translateY(150px)
+        scale(0.1);
+        
+    }
+    
+    100% {
+        transform:
+        translateY(0px)
+        scale(1);
+    }
+}
+
+@keyframes tremer {
+    0% {margin-left: 0;}  
+    25% {margin-left: 8px;}
+    50% {margin-left: 0;}
+    75% {margin-left: -8px;}
+    100% {margin-left: 0;}
+}
