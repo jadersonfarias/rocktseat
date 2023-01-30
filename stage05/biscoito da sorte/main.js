@@ -3,7 +3,7 @@ const bntreset = document.querySelector('#bntreset')
 const screen1 = document.querySelector('.screen1') 
 const screen2 = document.querySelector('.screen2')
 let randomNumber = Math.round(Math.random() * 10)
-console.log(randomNumber)
+
 
 const message = [
     {
