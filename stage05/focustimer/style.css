@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+   --color-hsla:240;
+    --bg-color-button: hsla(var(--color-hsla), 9%, 89%, 1);
+    --font-color: #323238;
+
+    --bg-button: hsl(var(--color-hsla), 9%, 89%);
+    --bg-button-focus: hsl(194, 97%, 31%);
+}
+
+body{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Roboto', sans-serif;
+    color: var(--font-color);
+     
+}
+main {
+   display: grid;
+   grid-template-areas: "A  C"
+                        "B  C"  
+   ;
+    
+}
+
+main div:nth-child(1) {
+    grid-area: A;
+    
+}
+
+main div:nth-child(2) {
+    grid-area: B;
+}
+
+main div:nth-child(3) {
+    grid-area: C;
+}
+
+#Timer {
+    font-size: 12.0rem;
+    display: flex;
+    align-items: flex-end;
+
+}
+button:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 500ms;
+    
+}
+
+
+
+.forest.hide  path.bg,
+ .rain.hide   path.bg,
+ .coffeeshop.hide  path.bg,
+ .fireplace.hide  path.bg {
+ 
+  fill: var(--bg-button-focus);
+     
+}
+
+.hide path#tree{
+    fill: rgb(18, 234, 18);
+}
+
+.hide path#water{
+    fill: rgb(18, 212, 234);
+}
+
+.hide path#coffee{
+    fill: rgb(89, 10, 81);
+}
+
+.hide path#fire{
+    fill: rgb(234, 90, 18);
+}
+
+
+
+
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    width: 33.6rem;
+    margin-left: 19.2rem;
+    
+    
+}    
+
+
