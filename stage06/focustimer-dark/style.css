@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+     font-size: 62.5%;
+   --color-hsla:194;
+    --bg-color-button: hsla(var(--color-hsla), 9%, 89%, 1);
+    --font-color: #323238;
+    --bg-card: #E1E1E6;
+    --bg-cards-blue: hsl(var(--color-hsla), 97%, 31%);
+    --Commands-color:#323238;
+    --bg-cards:#E1E1E6;
+}
+
+.dark-mode:root{
+     font-size: 62.5%;
+     --color-hsla:194;
+     --bg-color-button: hsla(var(--color-hsla), 9%, 89%, 1);
+     --bg-color: black;
+     --font-color: #FFFFFF;
+     --bg-card: #29292E;
+     --bg-button-focus: hsl(var(--color-hsla), 97%, 31%);
+     --Commands-color:white;
+     --bg-cards:#29292E;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color:var(--font-color);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+     
+}
+main {
+   display: grid;
+   grid-template-areas: "A  C"
+                        "B  C"  
+   ;
+
+    
+}
+
+main div:nth-child(1) {
+    grid-area: A;
+    
+}
+
+main div:nth-child(2) {
+    grid-area: B;
+}
+
+main div:nth-child(3) {
+    grid-area: C;
+}
+
+#Timer {
+    font-size: 12.0rem;
+    display: flex;
+    align-items: flex-end;
+
+}
+button:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background: var(--bg-card);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 500ms;
+    
+}
+
+
+
+.forest.hide  path.bg,
+ .rain.hide   path.bg,
+ .coffeeshop.hide  path.bg,
+ .fireplace.hide  path.bg {
+ 
+  fill: var(--bg-cards-blue);
+     
+}
+
+.hide path#tree{
+    fill: rgb(1, 49, 1);
+}
+
+.hide path#water{
+    fill: rgb(18, 212, 234);
+}
+
+.hide path#coffee{
+    fill: rgb(101, 82, 3);
+}
+
+.hide path#fire{
+    fill: rgb(252, 86, 3);
+}
+
+.cards path.bg{
+    fill: var(--bg-cards);
+}
+
+
+.controls svg path{
+    fill: var(--Commands-color) ;
+}
+
+path#tree,
+path#coffee,
+path#fire,
+path#water{
+    fill: var(--font-color);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    width: 33.6rem;
+    margin-left: 19.2rem;
+    
+   position: relative;
+}    
+
+.closed {
+    display: none;
+}
+
+.dark {
+   position: absolute;
+   right: 6.4rem;
+   top: 6.4rem;
+}
+
+.light {
+    position: absolute;
+    right: 6.4rem;
+    top: 6.4rem;
+}
+
+
+
+.wrapper-card input {
+    position: absolute;
+
+    width: 8rem;
+    z-index: 1;
+
+    left: 2.8rem;
+    bottom: 2.0rem;
+}
+
+.wrapper-card {
+    position: relative;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--text-color);
+    height: 0.35rem;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    margin-top: -0.6rem;
+    background-color: var(--font-color);
+}
